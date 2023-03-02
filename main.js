@@ -19,6 +19,7 @@ async function myFunc () {
       const inputApi = `${reqApi}?access-token=${accessToken}&ip=${ip}&msisdn=${userInput.value}`;
       const res2 = await fetch(inputApi);
       const data2 = await res2.json();
+      console.log(data2);
       if(data2.status === "error"){
         return userInputWarn.innerHTML = `Message : ${data2.message}`;
       }else{
